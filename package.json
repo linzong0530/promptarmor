@@ -1,0 +1,1 @@
+{"description":"PromptArmor — an LLM prompt-injection firewall: OpenAI-compatible proxy, detector, dashboard and self-test.","name":"promptarmor","private":true,"scripts":{"deploy":"wrangler deploy","dev":"wrangler dev","test":"node tests/run.mjs"},"type":"module","version":"0.1.0"}

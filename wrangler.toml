@@ -1,0 +1,20 @@
+name = "promptarmor"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+
+# KV namespace holding the decision audit log.
+# Create it with:  wrangler kv namespace create LOGS
+# Then replace the placeholder id below with the real namespace id before deploying.
+[[kv_namespaces]]
+binding = "LOGS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# Non-secret configuration only. The upstream model name below is a placeholder —
+# set it to whichever model your upstream account should use.
+[vars]
+UPSTREAM_BASE = "https://openrouter.ai/api/v1"
+MODEL = "openai/gpt-4o-mini"
+
+# SECRET — never write the real API key in this file or anywhere in the repo (rule P-07).
+# Set it once per environment with:
+#   wrangler secret put UPSTREAM_API_KEY
